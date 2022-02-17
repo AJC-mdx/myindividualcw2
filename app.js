@@ -49,7 +49,7 @@ app.param("collectionName", (req, res, next, collectionName) => {
   });
   
   app.get("/", (req, res, next) => {
-    res.send("Select a collection, e.g., /collection/messages");
+    res.send("This is the default page of my lessons app");
   });
   
   //GET request
@@ -92,7 +92,7 @@ app.param("collectionName", (req, res, next, collectionName) => {
   //middlewear error handler
 app.use(function (req, res) {
     res.status(404);
-    res.send("File not found!!");
+    res.send("File not found!!!");
   });
 
   //--port--//
