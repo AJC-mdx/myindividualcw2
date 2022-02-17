@@ -88,3 +88,9 @@ app.param("collectionName", (req, res, next, collectionName) => {
       }
     );
   });
+
+  //middlewear error handler
+app.use(function (req, res) {
+    res.status(404);
+    res.send("File not found!!");
+  });
