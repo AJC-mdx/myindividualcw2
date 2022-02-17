@@ -30,3 +30,14 @@ app.use(function (req, res, next) {
     else next();
   });
 });
+
+//--connect to mongodb--//
+const MongoClient = require("mongodb").MongoClient;
+
+let db;
+MongoClient.connect(
+  "mongodb+srv://mongodbmdx:nomoredb@cw2-cluster.rimee.mongodb.net/lessons-app?retryWrites=true&w=majority",
+  (err, client) => {
+    db = client.db("lessons-app");
+  }
+);
